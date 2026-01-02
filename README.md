@@ -1,29 +1,98 @@
-# Emotion-Classification-Model
+# 🎭 Emotion Detection App
 
-##DATASET USED
+An interactive **Machine Learning web application** that predicts the emotional tone of text input.  
+Built using **Natural Language Processing (NLP)** and a **Multinomial Naive Bayes** classifier.
 
-I have taken a dataset from kaggle. The dataset name is - "Emotions Dataset - Bhavik Jikadar".
-Each entry in this dataset consists of a text segment representing a Twitter message and a corresponding label indicating the predominant emotion conveyed. The emotions are classified into six categories: sadness (0), joy (1), love (2), anger (3), fear (4), and surprise (5).
-The dataset includes text samples with corresponding emotion labels.
-text: Description of context
-label: The emotions are classified into six categories: sadness (0), joy (1), love (2), anger (3), fear (4), and surprise (5).
+---
 
-## APPROACH SUMMARY
+## 🚀 Features
 
-*Preprocessing:* Text data is cleaned and converted to lowercase.
-*Feature Extraction:* TF-IDF Vectorizer is used to convert text into numerical features, removing                         English stop words and limiting to 5000 features.
-*Model:* A Multinomial Naive Bayes classifier is trained on the TF-IDF vectors to predict emotion           classes.
-*Evaluation:* The model is evaluated using accuracy score and a confusion matrix.
-*Tes:* Test the model predictions manually by giving the data from test dataset.
-*Demo:* Add a Gradio interface also that allows users to input text and get live emotion predictions.
+- **Real-time Prediction:** Get instant emotion labels for any English sentence  
+- **NLP Pipeline:** Uses TF-IDF Vectorization for text processing  
+- **Clean UI:** Simple and intuitive interface built with Streamlit  
+- **Multiclass Classification:** Detects 6 emotions:
+  - Sadness  
+  - Joy  
+  - Love  
+  - Anger  
+  - Fear  
+  - Surprise  
 
-## DEPENDENCIES
+---
 
--Python 3.7 or higher
--pandas
--numpy
--matplotlib
--scikit-learn
--seaborn
--gradio
+## 🛠️ Tech Stack
 
+- **Language:** Python  
+- **ML Libraries:** Scikit-Learn, Pandas, NumPy  
+- **UI Framework:** Streamlit  
+- **Model Persistence:** Joblib  
+
+---
+
+## 📁 Project Structure
+
+├── data/ # Dataset (training.csv)
+├── models/ # Trained .pkl files (Model & Vectorizer)
+├── app.py # Streamlit Web Application
+├── train.py # Model training & export logic
+├── requirements.txt # Project dependencies
+└── .gitignore # Files excluded from Git
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/your-repo-name.git
+cd your-repo-name
+2️⃣ Create a Virtual Environment
+bash
+Copy code
+python -m venv myvenv
+Activate the environment
+
+Windows
+
+bash
+Copy code
+myvenv\Scripts\activate
+Mac / Linux
+
+bash
+Copy code
+source myvenv/bin/activate
+3️⃣ Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
+4️⃣ Train the Model (Optional)
+Only required if you want to regenerate the .pkl model files.
+
+bash
+Copy code
+python train.py
+5️⃣ Run the Application
+bash
+Copy code
+streamlit run app.py
+📊 Dataset & Model Performance
+Algorithm: Multinomial Naive Bayes
+
+Text Preprocessing:
+
+TF-IDF Vectorizer
+
+Stop-word removal
+
+Maximum 1000 features
+
+Accuracy: ~85%
+(May vary depending on the dataset and training configuration)
+
+✅ Output
+The app predicts the emotional category of user-entered text in real time via a Streamlit web interface.
