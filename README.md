@@ -30,14 +30,15 @@ Built using **Natural Language Processing (NLP)** and a **Multinomial Naive Baye
 ---
 
 ## 📁 Project Structure
+```text
+├── models/             # Trained .pkl files (Model & Vectorizer)
+├── app.py              # Streamlit Web Application
+├── train.py            # Model training & Export logic
+├── training.csv        # Dataset
+├── requirements.txt    # Library dependencies
+└── .gitignore          # Files to exclude from Git
 
-├── data/ # Dataset (training.csv)
-├── models/ # Trained .pkl files (Model & Vectorizer)
-├── app.py # Streamlit Web Application
-├── train.py # Model training & export logic
-├── requirements.txt # Project dependencies
-└── .gitignore # Files excluded from Git
-
+```
 ---
 ## ⚙️ Installation & Setup
 ## 1️⃣ Clone the Repository
