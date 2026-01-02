@@ -39,56 +39,38 @@ Built using **Natural Language Processing (NLP)** and a **Multinomial Naive Baye
 └── .gitignore # Files excluded from Git
 
 ---
-##⚙️ Installation & Setup
-###1️⃣ Clone the Repository
-Bash
+## ⚙️ Installation & Setup
+## 1️⃣ Clone the Repository
 
-git clone https://github.com/ANINDASAU/Emotion-Classification-Model.git
+- git clone https://github.com/ANINDASAU/Emotion-Classification-Model.git
 
-###2️⃣ Create a Virtual Environment
-Bash
+## 2️⃣ Create a Virtual Environment
+- python -m venv myvenv
+- Activate the environment:
+*Windows:*
+- myvenv\Scripts\activate
+*Mac / Linux:*
+- source myvenv/bin/activate
+## 3️⃣ Install Dependencies
+- pip install -r requirements.txt
+## 4️⃣ Train the Model (Optional)
+- Only required if you want to regenerate the .pkl model files.
+- python train.py
+- 
+## 5️⃣ Run the Application
 
-python -m venv myvenv
-Activate the environment:
-
-Windows:
-
-Bash
-
-myvenv\Scripts\activate
-Mac / Linux:
-
-Bash
-
-source myvenv/bin/activate
-###3️⃣ Install Dependencies
-Bash
-
-pip install -r requirements.txt
-###4️⃣ Train the Model (Optional)
-Only required if you want to regenerate the .pkl model files.
-
-Bash
-
-python train.py
-###5️⃣ Run the Application
-Bash
-
-streamlit run app.py
+- streamlit run app.py
 
 ---
-##📊 Dataset & Model Performance
-The model utilizes the Multinomial Naive Bayes algorithm for classification.
+## 📊 Dataset & Model Performance
+- The model utilizes the Multinomial Naive Bayes algorithm for classification.
+- Text Preprocessing
+- Vectorization: TF-IDF Vectorizer
+- Stop-word removal: Included
+- Feature Limit: Maximum 1,000 features
 
-Text Preprocessing
-Vectorization: TF-IDF Vectorizer
+# Performance
+- Accuracy: ~85% (May vary depending on the dataset and training configuration)
 
-Stop-word removal: Included
-
-Feature Limit: Maximum 1,000 features
-
-Performance
-Accuracy: ~85% (May vary depending on the dataset and training configuration)
-
-##✅ Output
-The application predicts the emotional category of user-entered text in real-time via a clean, interactive Streamlit web interface.
+## ✅ Output
+- The application predicts the emotional category of user-entered text in real-time via a clean, interactive Streamlit web interface.
