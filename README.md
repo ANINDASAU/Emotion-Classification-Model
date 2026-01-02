@@ -38,61 +38,57 @@ Built using **Natural Language Processing (NLP)** and a **Multinomial Naive Baye
 ├── requirements.txt # Project dependencies
 └── .gitignore # Files excluded from Git
 
-yaml
-Copy code
-
 ---
+##⚙️ Installation & Setup
+###1️⃣ Clone the Repository
+Bash
 
-## ⚙️ Installation & Setup
+git clone https://github.com/ANINDASAU/Emotion-Classification-Model.git
 
-### 1️⃣ Clone the Repository
+###2️⃣ Create a Virtual Environment
+Bash
 
-```bash
-git clone https://github.com/YOUR_USERNAME/your-repo-name.git
-cd your-repo-name
-2️⃣ Create a Virtual Environment
-bash
-Copy code
 python -m venv myvenv
-Activate the environment
+Activate the environment:
 
-Windows
+Windows:
 
-bash
-Copy code
+Bash
+
 myvenv\Scripts\activate
-Mac / Linux
+Mac / Linux:
 
-bash
-Copy code
+Bash
+
 source myvenv/bin/activate
-3️⃣ Install Dependencies
-bash
-Copy code
+###3️⃣ Install Dependencies
+Bash
+
 pip install -r requirements.txt
-4️⃣ Train the Model (Optional)
+###4️⃣ Train the Model (Optional)
 Only required if you want to regenerate the .pkl model files.
 
-bash
-Copy code
+Bash
+
 python train.py
-5️⃣ Run the Application
-bash
-Copy code
+###5️⃣ Run the Application
+Bash
+
 streamlit run app.py
-📊 Dataset & Model Performance
-Algorithm: Multinomial Naive Bayes
 
-Text Preprocessing:
+---
+##📊 Dataset & Model Performance
+The model utilizes the Multinomial Naive Bayes algorithm for classification.
 
-TF-IDF Vectorizer
+Text Preprocessing
+Vectorization: TF-IDF Vectorizer
 
-Stop-word removal
+Stop-word removal: Included
 
-Maximum 1000 features
+Feature Limit: Maximum 1,000 features
 
-Accuracy: ~85%
-(May vary depending on the dataset and training configuration)
+Performance
+Accuracy: ~85% (May vary depending on the dataset and training configuration)
 
-✅ Output
-The app predicts the emotional category of user-entered text in real time via a Streamlit web interface.
+##✅ Output
+The application predicts the emotional category of user-entered text in real-time via a clean, interactive Streamlit web interface.
